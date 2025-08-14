@@ -5,7 +5,7 @@ import (
 	_ "unsafe"
 )
 
-//const LLGoPackage = "py.math"
+const LLGoPackage = "py.math"
 // Return the arc cosine (measured in radians) of x.
 //
 // The result is between 0 and pi.
@@ -147,14 +147,6 @@ func Gamma(x *py.Object) *py.Object
 //
 //go:linkname Gcd py.gcd
 func Gcd(__llgo_va_list ...interface{}) *py.Object
-// Return the integer part of the square root of the input.
-//
-//go:linkname Isqrt py.isqrt
-func Isqrt(n *py.Object) *py.Object
-// Least Common Multiple.
-//
-//go:linkname Lcm py.lcm
-func Lcm(__llgo_va_list ...interface{}) *py.Object
 // Return x * (2**i).
 //
 // This is essentially the inverse of frexp().
@@ -165,6 +157,20 @@ func Ldexp(x *py.Object, i *py.Object) *py.Object
 //
 //go:linkname Lgamma py.lgamma
 func Lgamma(x *py.Object) *py.Object
+// Return the base 10 logarithm of x.
+//
+//go:linkname Log10 py.log10
+func Log10(x *py.Object) *py.Object
+// Return the base 2 logarithm of x.
+//
+//go:linkname Log2 py.log2
+func Log2(x *py.Object) *py.Object
+// Return the fractional and integer parts of x.
+//
+// Both results carry the sign of x and are floats.
+//
+//go:linkname Modf py.modf
+func Modf(x *py.Object) *py.Object
 // Return x**y (x to the power of y).
 //
 //go:linkname Pow py.pow
