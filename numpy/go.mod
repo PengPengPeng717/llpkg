@@ -1,4 +1,4 @@
-module github.com/PengPengPeng717/llpkg/numpy
+module numpy
 
 go 1.24.5
 
